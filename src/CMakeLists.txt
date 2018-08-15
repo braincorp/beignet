@@ -190,4 +190,4 @@ target_link_libraries(
                       ${CMAKE_DL_LIBS}
                       ${OPENGL_LIBRARIES}
                       ${EGL_LIBRARIES})
-install (TARGETS cl LIBRARY DESTINATION ${BEIGNET_INSTALL_DIR})
+install (TARGETS cl LIBRARY DESTINATION ${BEIGNET_INSTALL_DIR} COMPONENT beignet)
