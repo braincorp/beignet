@@ -190,4 +190,8 @@ target_link_libraries(
                       ${CMAKE_DL_LIBS}
                       ${OPENGL_LIBRARIES}
                       ${EGL_LIBRARIES})
+
 install (TARGETS cl LIBRARY DESTINATION ${BEIGNET_INSTALL_DIR} COMPONENT beignet)
+
+execute_process(COMMAND ln -s "${BEIGNET_INSTALL_DIR}/libcl.so" "${BEIGNET_INSTALL_DIR}/libOpenCL.so")
+install (FILES ${BEIGNET_INSTALL_DIR}/libOpenCL.so DESTINATION "/usr/lib/" COMPONENT beignet)
