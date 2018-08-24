@@ -338,9 +338,9 @@ ADD_SUBDIRECTORY(include)
 ADD_SUBDIRECTORY(backend)
 ADD_SUBDIRECTORY(src)
 
-# IF(BUILD_UNIT_TESTS)
+IF(BUILD_UNIT_TESTS)
 ADD_SUBDIRECTORY(utests EXCLUDE_FROM_ALL)
-# ENDIF()
+ENDIF()
 
 # compile benchmark only if standalone compiler is not provided
 IF (NOT (USE_STANDALONE_GBE_COMPILER STREQUAL "true"))
