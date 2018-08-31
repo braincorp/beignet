@@ -15,6 +15,8 @@ if (NOT NOT_BUILD_STAND_ALONE_UTEST)
     INCLUDE_DIRECTORIES(${OPENCL_INCLUDE_DIRS})
   ENDIF(OPENCL_FOUND)
 
+  # Commented out the below code block as this might cause other dependencies built after beignet to generate wrong binaries type.
+
   # Force Release with debug info
   #if (NOT CMAKE_BUILD_TYPE)
   #  set (CMAKE_BUILD_TYPE RelWithDebInfo)

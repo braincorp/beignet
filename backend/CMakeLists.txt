@@ -13,6 +13,7 @@ set (CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${GBE_CMAKE_DIR}")
 set (GBE_DEBUG_MEMORY false CACHE bool "Activate the memory debugger")
 set (GBE_USE_BLOB false CACHE bool "Compile everything from one big file")
 
+# Commented out the below code block as this might cause other dependencies built after beignet to generate wrong binaries type.
 
 # Force Release with debug info
 #if (NOT CMAKE_BUILD_TYPE)

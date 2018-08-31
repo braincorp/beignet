@@ -61,6 +61,9 @@ else (BEIGNET_INSTALL_DIR STREQUAL "${CMAKE_INSTALL_PREFIX}/lib/beignet/")
   endif (BEIGNET_LIBRARY_ARCHITECTURE STREQUAL "")
 endif (BEIGNET_INSTALL_DIR STREQUAL "${CMAKE_INSTALL_PREFIX}/lib/beignet/")
 
+
+# Commented out the below code block as this might cause other dependencies built after beignet to generate wrong binaries type.
+
 # Force Release with debug info
 # if (NOT CMAKE_BUILD_TYPE)
 #  set (CMAKE_BUILD_TYPE RelWithDebInfo)
