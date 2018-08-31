@@ -293,7 +293,11 @@ configure_file (
 ADD_SUBDIRECTORY(include)
 ADD_SUBDIRECTORY(backend)
 ADD_SUBDIRECTORY(src)
-ADD_SUBDIRECTORY(utests EXCLUDE_FROM_ALL)
+
+IF(BUILD_BEIGNET_UNIT_TESTS)
+  MESSAGE(STATUS "Including unit tests in the build")
+  ADD_SUBDIRECTORY(utests EXCLUDE_FROM_ALL)
+ENDIF()
 
 # compile benchmark only if standalone compiler is not provided
 IF (NOT (USE_STANDALONE_GBE_COMPILER STREQUAL "true"))
